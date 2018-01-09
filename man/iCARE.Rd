@@ -24,8 +24,10 @@ The second provides more advanced functionality and computes absolute risk over 
 \code{\link{computeAbsoluteRiskSplitInterval}} allows the user compute absolute risk over the interval in two parts,
  incorporating two different sets of paramters before and after a specified cutpoint.  
 This function allows a different cutpoint for each covariate profile if desired. 
-
+The function for validating an absolute risk model is \code{\link{ModelValidation}}, and
+   \code{\link{plotModelValidation}} can be called for producing plots 
+   for model calibration, model discrimination and incidence rates.
 }
 %\references{ }
-\author{Paige Maas, Nilanjan Chatterjee and William Wheeler <wheelerb@imsweb.com>}
+\author{Paige Maas, Parichoy Pal Choudhury, Nilanjan Chatterjee and William Wheeler <wheelerb@imsweb.com>}
 \keyword{package}

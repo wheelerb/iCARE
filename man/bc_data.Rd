@@ -11,6 +11,8 @@
 \alias{ref_cov_dat}
 \alias{new_snp_prof}
 \alias{ref_cov_dat_post_50}
+\alias{validation.nested.case.control.data}
+\alias{validation.cohort.data}
 
 
 %\docType{package}
@@ -18,14 +20,41 @@
   Data for examples
 }
 \description{
- Data for \code{\link{computeAbsoluteRisk}} and \code{\link{computeAbsoluteRiskSplitInterval}} 
+ Example data for \code{\link{computeAbsoluteRisk}}, \code{\link{computeAbsoluteRiskSplitInterval}},
+ \code{\link{ModelValidation}}, and \code{\link{plotModelValidation}}.
 }
 \details{ 
-"mort_inc" contains age-specific incidence rates of all-cause mortality from reference (1) below \cr
-"bc_15_snps" contains published SNP information from reference (2)  \cr
- "bc_inc" contains age-specific incidence rates of breast cancer from reference (3) \cr 
-"ref_cov_dat" contains a subsample of data imputed using reference (4) and (5) 
-}
+\itemize{
+\item \code{bc_model_cov_info}: a main list containing information on family history and parity; 
+   information on each risk factor is given as a list 
+\item \code{bc_15_snps}: contains published SNP information from reference (2)  
+\item \code{bc_model_log_or}: vector of log-odds ratios of family history and parity 
+\item \code{bc_model_log_or_post_50}: vector of log-odds ratios of family history and parity for women 50 years or older 
+\item \code{ref_cov_dat}: contains a subsample of data imputed using reference (4) and (5) 
+\item \code{ref_cov_dat_post_50}: contains a subsample of the data on family history and parity,
+    to be used as reference dataset for women 50 years or older 
+\item \code{bc_inc}: contains age-specific incidence rates of breast cancer from reference (3) 
+\item \code{mort_inc}: contains age-specific incidence rates of all-cause mortality from reference (1) below 
+\item \code{new_cov_prof}: Information on family history and parity for three women (given for illustration of absolute risk prediction) 
+\item \code{new_snp_prof}: Information on 15 breast cancer associated SNPs for three women (given for illustration of absolute risk prediction) 
+\item \code{validation.cohort.data}: Simulated  full cohort dataset of 50,000 women for illustration 
+of model validation. The variables are: 
+ \itemize{
+  \item \code{id}: Subject id 
+  \item \code{famhist}: Family history; binary indicator of presence/absence of first degree relatives 
+  \item \code{parity}: Number of child births 
+  \item \code{study.entry.age}: age of study entry 
+  \item \code{study.exit.age}: age of study exit 
+  \item \code{observed.outcome}: binary indicator of diease status (yes/no) 
+  \item \code{time.of.onset}: time (in years) since study entry to the development of disease; 
+   for subjects who have not developed disease beyond the observed followup, it is set to Inf 
+   observed.followup: number of years the subject is followed up in the study 
+   (difference between the age of study exit and age of study entry)
+ } % END: itemize
+\item \code{validation.nested.case.control.data}: A simulated example of a case-control study of 2694 women, nested within the full cohort.
+ In addition to the variables given above, it has information on the 15 breast cancer associated SNPs with variable names being the rs-identifiers.
+} % END itemize
+} % END: details
 \examples{
 
  temp <- data(bc_data, package="iCARE")
