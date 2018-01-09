@@ -1,2 +1,3 @@
+import(stats, utils, graphics, plotrix, gtools, Hmisc)
 useDynLib(iCARE)
-export(computeAbsoluteRisk, computeAbsoluteRiskSplitInterval)
+export(computeAbsoluteRisk, computeAbsoluteRiskSplitInterval, ModelValidation, plotModelValidation)

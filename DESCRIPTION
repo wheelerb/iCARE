@@ -1,13 +1,15 @@
 Package: iCARE
-Title: A Tool for Individualized Coherent Absolute Risk Estimation (iCARE)
-Version: 1.7.0
-Date: 2015-07-20
-Author: Paige Maas, Nilanjan Chatterjee and William Wheeler
+Title: A Tool for Individualized Coherent Absolute Risk Estimation
+        (iCARE)
+Version: 2.0.0
+Date: 2018-01-02
+Author: Paige Maas, Parichoy Pal Choudhury, Nilanjan Chatterjee and William Wheeler
 Description: An R package to compute Individualized Coherent Absolute Risk Estimators.
 Maintainer: Bill Wheeler <wheelerb@imsweb.com>
-Depends: R (>= 3.3.0)
+Depends: R (>= 3.3.0), plotrix, gtools, Hmisc
 Suggests: RUnit, BiocGenerics
 License: GPL-3 + file LICENSE
 LazyData: true
 biocViews: Software, StatisticalMethod, GenomeWideAssociation
 NeedsCompilation: yes
+Packaged: 2017-10-31 00:38:40 UTC; biocbuild
